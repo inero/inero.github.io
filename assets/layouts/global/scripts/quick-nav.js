@@ -22,4 +22,4 @@ var QuickNav = function () {
     };
 }();
 
-QuickNav.init(); // init metronic core componets
+QuickNav.init(); // init core componets

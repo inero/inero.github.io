@@ -15,7 +15,7 @@ var Contact = function () {
 					lng: -38.494333,
 		            title: 'Loop, Inc.',
 		            infoWindow: {
-		                content: "<b>Metronic, Inc.</b> 795 Park Ave, Suite 120<br>San Francisco, CA 94107"
+		                content: "<b>iNero, Inc.</b> Bangalore, KA 560066"
 		            }
 		        });
 

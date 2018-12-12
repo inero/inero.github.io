@@ -61,6 +61,6 @@ var FormInputMask = function () {
 
 if (App.isAngularJsApp() === false) { 
     jQuery(document).ready(function() {
-        FormInputMask.init(); // init metronic core componets
+        FormInputMask.init(); // init core componets
     });
 }

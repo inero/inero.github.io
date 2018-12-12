@@ -1393,6 +1393,6 @@ var Dashboard = function() {
 
 if (App.isAngularJsApp() === false) {
     jQuery(document).ready(function() {
-        Dashboard.init(); // init metronic core componets
+        Dashboard.init(); // init core componets
     });
 }

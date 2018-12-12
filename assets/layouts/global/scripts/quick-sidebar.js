@@ -165,6 +165,6 @@ var QuickSidebar = function () {
 
 if (App.isAngularJsApp() === false) { 
     jQuery(document).ready(function() {    
-       QuickSidebar.init(); // init metronic core componets
+       QuickSidebar.init(); // init core componets
     });
 }
