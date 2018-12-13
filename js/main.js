@@ -80,7 +80,7 @@ iNeroApp.controller('FooterController', ['$scope', function($scope) {
 
 iNeroApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     // Redirect any unmatched url
-    $urlRouterProvider.otherwise("/dashboard.html");  
+    $urlRouterProvider.otherwise("/blog.html");  
     
     $stateProvider
 
@@ -212,6 +212,30 @@ iNeroApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider
                         name: 'iNeroApp',
                         files: [
                             'js/controllers/BlogPageController.js'
+                        ] 
+                    }]);
+                }]
+            }
+        })
+
+        // Blog
+        .state('blogpost', {
+            url: "/blog_post.html",
+            templateUrl: "views/blog_post.html",
+            data: {pageTitle: 'iNero Blog'},
+            controller: "BlogPostPageController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([{
+                        name: 'ui.select',
+                        insertBefore: '#ng_load_plugins_before',
+                        files: [
+                            '../assets/pages/css/blog.min.css'
+                        ] 
+                    }, {
+                        name: 'iNeroApp',
+                        files: [
+                            'js/controllers/BlogPostPageController.js'
                         ] 
                     }]);
                 }]
