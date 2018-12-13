@@ -194,6 +194,30 @@ iNeroApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider
             }
         })
 
+        // Blog
+        .state('blog', {
+            url: "/blog.html",
+            templateUrl: "views/blog.html",
+            data: {pageTitle: 'iNero Blog'},
+            controller: "BlogPageController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([{
+                        name: 'ui.select',
+                        insertBefore: '#ng_load_plugins_before',
+                        files: [
+                            '../assets/pages/css/blog.min.css'
+                        ] 
+                    }, {
+                        name: 'iNeroApp',
+                        files: [
+                            'js/controllers/BlogPageController.js'
+                        ] 
+                    }]);
+                }]
+            }
+        })
+
         // Tree View
         .state('tree', {
             url: "/tree",
