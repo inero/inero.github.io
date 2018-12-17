@@ -54,21 +54,21 @@ iNeroApp.controller('SidebarController', ['$scope', function($scope) {
 
 iNeroApp.controller('QuickSidebarController', ['$scope', function($scope) {    
     $scope.$on('$includeContentLoaded', function() {
-       setTimeout(function(){
-            QuickSidebar.init(); // init quick sidebar        
-        }, 2000)
+    //    setTimeout(function(){
+    //         QuickSidebar.init(); // init quick sidebar        
+    //     }, 2000)
     });
 }]);
 
 iNeroApp.controller('PageHeadController', ['$scope', function($scope) {
     $scope.$on('$includeContentLoaded', function() {        
-        Demo.init(); // init theme panel
+        //Demo.init(); // init theme panel
     });
 }]);
 
 iNeroApp.controller('ThemePanelController', ['$scope', function($scope) {    
     $scope.$on('$includeContentLoaded', function() {
-        Demo.init(); // init theme panel
+        //Demo.init(); // init theme panel
     });
 }]);
 
