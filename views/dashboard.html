@@ -1,24 +1,4 @@
-<!-- BEGIN PAGE BREADCRUMB -->
-<ul class="page-breadcrumb breadcrumb hide">
-    <li>
-        <a ui-sref="dashboard">Home</a>
-        <i class="fa fa-circle"></i>
-    </li>
-    <li class="active"> Dashboard </li>
-</ul>
-<!-- END PAGE BREADCRUMB -->
-<!-- BEGIN MAIN CONTENT -->
 <div ng-controller="DashboardController">
-    <!-- <div class="note note-info">
-        <h3>Meet iNero AngularJS Version!
-            <span class="close" data-close="note"></span>
-        </h3>
-        <p> AngularJS version of iNero gives an extremely fast browsing experience to users. It uses lazy loading of dependency resources(modules, controllers, templates, jquery plugins, javascripts and even css files) on demand. UI-Router is used for
-            flexible routing with nested views. UI Bootstrap enables using all Bootstrap framework components with pure AngularJS directives. </p>
-        <span class="label label-danger">NOTE:</span> All iNero features from the HTML version(pages, layout options, components, plugins, etc) are fully compatible in the AngularJS version.</span>
-        </p>
-    </div> -->
-    <!-- BEGIN DASHBOARD STATS -->
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat blue">
@@ -77,10 +57,8 @@
             </div>
         </div>
     </div>
-    <!-- END DASHBOARD STATS -->
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <!-- BEGIN PORTLET-->
             <div class="portlet light bordered ">
                 <div class="portlet-title">
                     <div class="caption caption-md">
@@ -158,10 +136,8 @@
                     <div id="sales_statistics" class="portlet-body-morris-fit morris-chart" style="height: 260px"> </div>
                 </div>
             </div>
-            <!-- END PORTLET-->
         </div>
         <div class="col-md-6 col-sm-12">
-            <!-- BEGIN PORTLET-->
             <div class="portlet light bordered ">
                 <div class="portlet-title">
                     <div class="caption caption-md">
@@ -185,7 +161,6 @@
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <div class="stat-left">
                                 <div class="stat-chart">
-                                    <!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break -->
                                     <div id="sparkline_bar"></div>
                                 </div>
                                 <div class="stat-number">
@@ -197,7 +172,6 @@
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <div class="stat-right">
                                 <div class="stat-chart">
-                                    <!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break -->
                                     <div id="sparkline_bar2"></div>
                                 </div>
                                 <div class="stat-number">
@@ -274,12 +248,10 @@
                     </div>
                 </div>
             </div>
-            <!-- END PORTLET-->
         </div>
     </div>
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <!-- BEGIN PORTLET-->
             <div class="portlet light bordered tasks-widget">
                 <div class="portlet-title">
                     <div class="caption caption-md">
@@ -298,7 +270,6 @@
                 <div class="portlet-body">
                     <div class="task-content">
                         <div class="scroller" style="height: 282px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
-                            <!-- START TASK LIST -->
                             <ul class="task-list">
                                 <li>
                                     <div class="task-checkbox">
@@ -584,7 +555,6 @@
                                     </div>
                                 </li>
                             </ul>
-                            <!-- END START TASK LIST -->
                         </div>
                     </div>
                     <div class="task-footer">
@@ -594,10 +564,8 @@
                     </div>
                 </div>
             </div>
-            <!-- END PORTLET-->
         </div>
         <div class="col-md-6 col-sm-12">
-            <!-- BEGIN PORTLET-->
             <div class="portlet light bordered">
                 <div class="portlet-title tabbable-line">
                     <div class="caption caption-md">
@@ -614,7 +582,6 @@
                     </ul>
                 </div>
                 <div class="portlet-body">
-                    <!--BEGIN TABS-->
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1_1">
                             <div class="scroller" style="height: 306px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
@@ -1135,15 +1102,12 @@
                             </div>
                         </div>
                     </div>
-                    <!--END TABS-->
                 </div>
             </div>
-            <!-- END PORTLET-->
         </div>
     </div>
     <div class="row">
         <div class="col-md-6 col-sm-6">
-            <!-- BEGIN REGIONAL STATS PORTLET-->
             <div class="portlet light bordered ">
                 <div class="portlet-title">
                     <div class="caption">
@@ -1446,10 +1410,8 @@
                     </div>
                 </div>
             </div>
-            <!-- END REGIONAL STATS PORTLET-->
         </div>
         <div class="col-md-6 col-sm-6">
-            <!-- BEGIN PORTLET-->
             <div class="portlet light bordered">
                 <div class="portlet-title">
                     <div class="caption caption-md">
@@ -1556,13 +1518,9 @@
                     </div>
                 </div>
             </div>
-            <!-- END PORTLET-->
         </div>
     </div>
 </div>
-<!-- END MAIN CONTENT -->
-<!-- BEGIN MAIN JS & CSS -->
 <script>
     Dashboard.init();
 </script>
-<!-- BEGIN MAIN JS & CSS -->

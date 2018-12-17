@@ -1,36 +1,17 @@
-<!-- BEGIN PAGE BREADCRUMB -->
-<ul class="page-breadcrumb breadcrumb">
-    <li>
-        <a ui-sref="dashboard">Home</a>
-        <i class="fa fa-circle"></i>
-    </li>
-    <li class="active"> User Profile </li>
-</ul>
-<!-- END PAGE BREADCRUMB -->
-<!-- BEGIN PAGE CONTENT-->
 <div class="row" ng-controller="UserProfileController">
     <div class="col-md-12">
-        <!-- BEGIN PROFILE SIDEBAR -->
         <div class="profile-sidebar">
-            <!-- PORTLET MAIN -->
             <div class="portlet light profile-sidebar-portlet">
-                <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="{{settings.assetsPath}}/pages/media/profile/profile_user.jpg" class="img-responsive" alt=""> </div>
-                <!-- END SIDEBAR USERPIC -->
-                <!-- SIDEBAR USER TITLE -->
+                    <img src="{{settings.assetsPath}}/layouts/layout3/img/avatar13.jpg" class="img-responsive" alt=""> </div>
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name"> Immanuel Kirubaharan </div>
                     <div class="profile-usertitle-job"> Developer </div>
                 </div>
-                <!-- END SIDEBAR USER TITLE -->
-                <!-- SIDEBAR BUTTONS -->
                 <div class="profile-userbuttons">
                     <button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
                     <button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
                 </div>
-                <!-- END SIDEBAR BUTTONS -->
-                <!-- SIDEBAR MENU -->
                 <div class="profile-usermenu">
                     <ul class="nav">
                         <li ng-class="{active: $state.includes('profile.dashboard')}">
@@ -51,12 +32,8 @@
                         </li>
                     </ul>
                 </div>
-                <!-- END MENU -->
             </div>
-            <!-- END PORTLET MAIN -->
-            <!-- PORTLET MAIN -->
             <div class="portlet light">
-                <!-- STAT -->
                 <div class="row list-separated profile-stat">
                     <div class="col-md-4 col-sm-4 col-xs-6">
                         <div class="uppercase profile-stat-title"> 37 </div>
@@ -71,7 +48,6 @@
                         <div class="uppercase profile-stat-text"> Uploads </div>
                     </div>
                 </div>
-                <!-- END STAT -->
                 <div>
                     <h4 class="profile-desc-title">About Immanuel Kirubaharan</h4>
                     <span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span>
@@ -89,12 +65,7 @@
                     </div>
                 </div>
             </div>
-            <!-- END PORTLET MAIN -->
         </div>
-        <!-- END BEGIN PROFILE SIDEBAR -->
-        <!-- BEGIN PROFILE CONTENT -->
         <div ui-view class="profile-content fade-in-up"> </div>
-        <!-- END PROFILE CONTENT -->
     </div>
 </div>
-<!-- END PAGE CONTENT-->
