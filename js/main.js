@@ -88,7 +88,7 @@ iNeroApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider
         .state('dashboard', {
             url: "/dashboard",
             templateUrl: "views/dashboard.html",            
-            data: {pageTitle: 'Admin Dashboard Template', breadcrumb:{parent:{name:'Home',link:'dashboard'},child:{name:'Dashboard'}}},
+            data: {pageTitle: 'Dashboard', breadcrumb:{parent:{name:'Home',link:'dashboard'},child:{name:'Dashboard'}}},
             controller: "DashboardController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {

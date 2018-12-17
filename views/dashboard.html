@@ -3,13 +3,14 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat blue">
                 <div class="visual">
-                    <i class="fa fa-comments"></i>
+                    <weather-icon cloudiness="{{ weather.clouds }}"></weather-icon>
                 </div>
                 <div class="details">
-                    <div class="number"> 1349 </div>
-                    <div class="desc"> New Feedbacks </div>
+                    <div class="number">  {{weather.temp.name}} </div>
+                    <div class="desc">  {{weather.temp.current | temp:2}} </div>
                 </div>
-                <a class="more" href="#"> View more
+                <a class="more" href="#"> 
+                    <weather-climate clouldiness="{{ weather.clouds }}"></weather-climate>  |  {{ weather.temp.min | temp:2 }} - {{ weather.temp.max | temp:2 }} 
                     <i class="m-icon-swapright m-icon-white"></i>
                 </a>
             </div>
@@ -17,13 +18,13 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat red">
                 <div class="visual">
-                    <i class="fa fa-bar-chart-o"></i>
+                    <i class="fa fa-globe"></i>
                 </div>
                 <div class="details">
-                    <div class="number"> 12,5M$ </div>
-                    <div class="desc"> Total Profit </div>
+                    <div class="number"> <digital-clock-time></digital-clock-time> </div>
+                    <div class="desc"> <digital-clock-seconds></digital-clock-seconds> Seconds </div>
                 </div>
-                <a class="more" href="#"> View more
+                <a class="more" href="#"> Current Time
                     <i class="m-icon-swapright m-icon-white"></i>
                 </a>
             </div>
@@ -31,13 +32,13 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat green">
                 <div class="visual">
-                    <i class="fa fa-shopping-cart"></i>
+                    <i class="fa fa-calendar"></i>
                 </div>
                 <div class="details">
-                    <div class="number"> 549 </div>
-                    <div class="desc"> New Orders </div>
+                    <div class="number"> {{date | date: 'EEEE'}} </div>
+                    <div class="desc"> {{date | date: 'd / y'}} </div>
                 </div>
-                <a class="more" href="#"> View more
+                <a class="more" href="#"> {{date | date: 'MMMM'}} Month
                     <i class="m-icon-swapright m-icon-white"></i>
                 </a>
             </div>
@@ -45,13 +46,16 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat purple">
                 <div class="visual">
-                    <i class="fa fa-globe"></i>
+                    <i class="icon-clock"></i>
                 </div>
                 <div class="details">
-                    <div class="number"> +89% </div>
-                    <div class="desc"> Brand Popularity </div>
+                    <div class="number">{{counter/120 | number: 0}} {{(counter/60)>1 ? 'Minutes' : 'Minute'}}</div>
+                    <div class="desc">
+                        {{counter}} Seconds
+                    </div>
                 </div>
-                <a class="more" href="#"> View more
+                <a class="more" href="#"> 
+                    Logged in Time
                     <i class="m-icon-swapright m-icon-white"></i>
                 </a>
             </div>
