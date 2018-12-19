@@ -80,7 +80,7 @@ iNeroApp.controller('FooterController', ['$scope', function($scope) {
 
 iNeroApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     // Redirect any unmatched url
-    $urlRouterProvider.otherwise("/blog.html");  
+    $urlRouterProvider.otherwise("/dashboard");  
     
     $stateProvider
 
@@ -111,7 +111,7 @@ iNeroApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider
 
         // Blog
         .state('blog', {
-            url: "/blog.html",
+            url: "/blog",
             templateUrl: "views/blog.html",
             data: {pageTitle: 'Blog', breadcrumb:{parent:{name:'Home',link:'dashboard'},child:{name:'Blog'}}},
             controller: "BlogPageController",
@@ -135,7 +135,7 @@ iNeroApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider
 
         // Blog
         .state('blogpost', {
-            url: "/blog_post.html",
+            url: "/blog_post",
             templateUrl: "views/blog_post.html",
             data: {pageTitle: 'Blog Post', breadcrumb:{parent:{name:'Blog',link:'blog'},child:{name:'Blog Post'}}},
             controller: "BlogPostPageController",
