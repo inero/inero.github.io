@@ -33,11 +33,25 @@ iNeroApp.factory('settings', ['$rootScope', function($rootScope) {
     return settings;
 }]);
 
-iNeroApp.controller('AppController', ['$scope', '$rootScope', function($scope, $rootScope) {
+iNeroApp.controller('AppController', ['$scope', '$rootScope', 'weatherService', '$filter', '$timeout', function($scope, $rootScope, weatherService, $filter, $timeout) {
     $scope.$on('$viewContentLoaded', function() {
         App.initComponents(); // init core components
         //Layout.init(); //  Init entire layout(header, footer, sidebar, etc) on page load if the partials included in server side instead of loading with ng-include directive 
     });
+    $scope.weather = weatherService.getWeather();
+    $scope.date = new Date();
+    $scope.Day = $filter('date')(new Date(), 'EEEE', 'ITC');
+    $scope.Date = $filter('date')(new Date(), 'MMMM d, y', 'ITC');
+    $scope.timerCounter = function(){
+        var timer;
+        $scope.counter = 0;
+        var updateCounter = function() {
+            $scope.counter++;
+            timer = $timeout(updateCounter, 1000);
+        };
+        updateCounter();
+    };
+    $scope.timerCounter();
 }]);
 
 iNeroApp.controller('HeaderController', ['$scope', function($scope) {
